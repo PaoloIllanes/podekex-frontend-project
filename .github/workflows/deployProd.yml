@@ -14,10 +14,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       # Add any build steps here. For example:
-        run: npm install && npm ci && npm run build
+        run: npm ci && npm run build,
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: "${{ secrets.GITHUB_TOKEN }}"
-          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
+          repoToken: "${{ secrets.TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_POKEDEX_58407 }}"
           projectId: your-Firebase-project-ID
           channelId: live
