@@ -1,5 +1,7 @@
 name: Deploy to Live Channel
 
+name: Deploy to Live Channel
+
 on:
   push:
     branches:
@@ -14,10 +16,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       # Add any build steps here. For example:
-        run: npm ci && npm run build,
+      # - run: npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.TOKEN }}"
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_POKEDEX_58407 }}"
-          projectId: your-Firebase-project-ID
+          projectId: pokedex-58407
           channelId: live
